@@ -47,6 +47,31 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="phone" :value="__('Phone')" />
+            <x-text-input id="phone" name="phone" type="tel" class="mt-1 block w-full" :value="old('phone', $user->phone)" required autocomplete="tel" />
+            <x-input-error class="mt-2" :messages="$errors->get('phone')" />
+
+            @if ($user->phone_verified_at === null)
+                <div>
+                    <p class="text-sm mt-2 text-gray-800">
+                        {{ __('Your phone number is unverified.') }}
+
+                        <button form="send-phone-verification" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            {{ __('Click here to re-send the verification SMS.') }}
+                        </button>
+                    </p>
+
+                    @if (session('status') === 'phone-verification-link-sent')
+                        <p class="mt-2 font-medium text-sm text-green-600">
+                            {{ __('A new verification SMS has been sent to your phone number.') }}
+                        </p>
+                    @endif
+                </div>
+            @endif
+        </div>
+
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
