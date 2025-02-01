@@ -30,7 +30,7 @@
                                 <img src="{{ Auth::user()->profile_image }}" alt="Profile Picture"
                                     style="width: 32px; height: 32px; object-fit: cover;" class="rounded-full me-2">
                             @else
-                                <img src="{{ asset('images/default-profile.png') }}" alt="Default Profile"
+                                <img src="{{ asset('img/test.png') }}" alt="Default Profile"
                                     style="width: 32px; height: 32px; object-fit: cover;" class="rounded-full me-2">
                             @endif
 
