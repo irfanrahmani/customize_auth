@@ -43,10 +43,10 @@ class RegisteredUserController extends Controller
 
         // Handle the file
 
-        $profileBinary = null;
+        $profilePath = null;
+        if($request->hasFile('profile')) {
+            $profilePath = $request->file('profile')->store('profiles', 'public'); // Store in 'storage/app/public/profiles'
 
-        if ($request->hasFile('profile')) {
-            $profileBinary = file_get_contents($request->file('profile')->getRealPath());
         }
 
         $user = User::create([
@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'password' => Hash::make($request->password),
-            'profile' => $profileBinary,
+            'profile' => $profilePath,
         ]);
 
         event(new Registered($user));
