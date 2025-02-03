@@ -27,10 +27,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'profile',
     ];
 
-    public function getProfileImageAttribute()
-    {
-        return $this->profile ? 'data:image/png;base64,' . base64_encode($this->profile) : null;
-    }
+
 
     /**
      * The attributes that should be hidden for serialization.
