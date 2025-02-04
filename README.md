@@ -2,7 +2,8 @@
 
 # Breeze Authentication with profile 
 
-This Project is customized as an example of customizing breeze for user authentication
+This Project is customized as an example of customizing breeze for user authentication.
+This Project allows you to use breeze authentication with profile and mobile number. Also It is optimized for update.
 
 ## Key Features:
 - User Phone Number
@@ -10,6 +11,9 @@ This Project is customized as an example of customizing breeze for user authenti
 - Email Verification
 - Editing Phone Number and profile by User
 - Storing profile in pubilc directory
+
+## Next Step :
+- Role Management with spatie
 
 <!-- - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).

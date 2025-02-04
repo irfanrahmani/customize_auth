@@ -23,11 +23,11 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <!-- Profile Image -->
-                            <div class="w-8 h-8 overflow-hidden rounded-full">
+                            <div class="w-10 h-10 overflow-hidden rounded-full">
                                 <img src="{{ Auth::user()->profile ? asset('storage/' . Auth::user()->profile) : asset('images/default-avatar.png') }}"
-                                     alt="Profile" class="w-full h-full object-cover">
+                                     alt="Profile" class="w-9 h-9 object-cover">
                             </div>
+
 
                             <!-- User Name -->
                             <div class="ms-2">{{ Auth::user()->name }}</div>
