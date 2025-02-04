@@ -9,6 +9,8 @@ This Project is customized as an example of customizing breeze for user authenti
 - User can profile picture
 - Email Verification
 - Editing Phone Number and profile by User
+- Storing profile in pubilc directory
+
 <!-- - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting). -->
